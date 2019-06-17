@@ -1,0 +1,30 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://120.79.24.212:8081/eureka/
+server:
+  port: 8084
+spring:
+  application:
+    name: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/bbs?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    view:
+      prefix: /page/
+      suffix: .jsp
+      ##关闭默认模板引擎
+    thymeleaf:
+      cache: false
+      enable-spring-el-compiler: false
+
+mybatis:
+  mapper-locations: classpath*:com/shop/dev/mapper/*.xml
+  type-aliases-package: com.shop.dev.mapper
+
+
+
+

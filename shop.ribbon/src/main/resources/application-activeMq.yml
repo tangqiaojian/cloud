@@ -1,0 +1,12 @@
+spring:
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://localhost:61616
+    pool:
+      enabled: false
+      max-connections: 10
+    in-memory: false
+
+queueName: publish.queue
+topicName: publish.topic
